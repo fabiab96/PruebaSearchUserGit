@@ -1,0 +1,13 @@
+.profile {
+    background: #fbf8f4;
+    padding: 2rem;
+    box-shadow: #363636 5px 5px 0px 1px;
+}
+.profile__img {
+    max-width: 20rem;
+}
+
+.login {
+    background-color: #363636;
+    color: #fbf8f4;
+}

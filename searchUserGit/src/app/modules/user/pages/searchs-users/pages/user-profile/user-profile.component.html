@@ -1,0 +1,75 @@
+@if (profile()) {
+<article class="profile row m-5 gap-4 justify-content-center">
+  <section class="col-auto">
+    <img
+      class="profile__img"
+      [srcset]="profile()?.avatar_url"
+      [alt]="profile()?.login"
+      fabImgAvatar
+    />
+  </section>
+  <section class="row gap-2 col-auto justify-content-center">
+    <div class="d-flex col-8 justify-content-between">
+      <div class="fw-bold h1">#{{ profile()?.id }}</div>
+      <div class="fw-bold h2 login">{{ profile()?.login }}</div>
+    </div>
+    <fab-label-text
+      class="col-6"
+      label="Bio"
+      [text]="profile()?.bio"
+    ></fab-label-text>
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Name"
+      [text]="profile()?.name"
+    ></fab-label-text>
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Followers"
+      [text]="profile()?.followers"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Following"
+      [text]="profile()?.following"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Public Repos"
+      [text]="profile()?.public_repos"
+    />
+
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Company"
+      [text]="profile()?.company"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Twitter Username"
+      [text]="profile()?.twitter_username"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="email"
+      [text]="profile()?.email"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Location"
+      [text]="profile()?.location"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Public Repos"
+      [text]="profile()?.public_repos"
+    />
+    <fab-label-text
+      class="col-6 col-lg-3"
+      label="Created at"
+      [text]="profile()?.created_at | date : 'dd/MM/YYYY'"
+    />
+  </section>
+  <fab-button type_style="dark" text="Return" (click)="return()"></fab-button>
+</article>
+}

@@ -1,0 +1,23 @@
+.profile {
+    align-items: center;
+    background: #fbf8f4;
+    width: 30rem;
+    padding: 1rem;
+    box-shadow: #363636 5px 5px 0px 1px;
+    cursor: pointer;
+}
+:hover {
+    background: #fef3e4;
+}
+
+.profile__img {
+    width: 10rem;
+    height: 10rem;
+}
+.profile__id {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.profile__login {
+    font-size: 2rem;
+}

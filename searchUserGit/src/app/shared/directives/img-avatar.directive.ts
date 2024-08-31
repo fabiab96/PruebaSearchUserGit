@@ -1,11 +1,11 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[fabImgAvatar]',
-  standalone: true
+  standalone: true,
 })
 export class ImgAvatarDirective {
-
-  constructor() { }
-
+  constructor(elementRef: ElementRef) {
+    elementRef.nativeElement.style.borderRadius = '50%';
+  }
 }

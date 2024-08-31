@@ -1,0 +1,17 @@
+.searchUser {
+    padding: 1rem;
+}
+.searchUser__form {
+    height: min-content;
+}
+.searchUser__data {
+    padding: 1rem;
+    justify-items: center;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    animation: 3s ease-out;
+}
+.search__input {
+    max-width: 25rem;
+}

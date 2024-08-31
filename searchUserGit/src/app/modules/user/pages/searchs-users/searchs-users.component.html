@@ -1,1 +1,38 @@
-<p>searchs-users works!</p>
+<article class="searchUser">
+  <section class="searchUser__form">
+    <form
+      [formGroup]="form"
+      class="d-flex justify-content-center align-items-center"
+    >
+      <div class="row">
+        <div class="col-12 d-flex gap-4 align-items-center">
+          <fab-input
+            class="search__input"
+            formControlName="q"
+            placeholder="Search user"
+          />
+          <fab-button
+            type="submit"
+            text="Search"
+            type_style="dark"
+            (click)="searchUsers()"
+          ></fab-button>
+        </div>
+        <div class="col-12 text-danger">
+          @if (form.controls['q'].errors && form.controls['q'].touched) { @if
+          (form.controls['q'].hasError('required')) {
+          <span>Campo necesario</span> } @if
+          (form.controls['q'].hasError('maxlength')) {
+          <span>Máximo 20 caracteres</span> } @if
+          (form.controls['q'].hasError('minlength')) {
+          <span>Mínimo 4 caracteres</span> } }
+        </div>
+      </div>
+    </form>
+  </section>
+  <section class="searchUser__data">
+    @for (item of usersData(); track $index) {
+    <fab-profile [item]="item" (click)="navigateToProfile(item.login)" />
+    }
+  </section>
+</article>

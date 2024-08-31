@@ -1,1 +1,12 @@
-<p>profile works!</p>
+<div [id]="item().id" class="d-flex gap-4 profile">
+  <img
+    class="profile__img"
+    [srcset]="item().avatar_url"
+    alt="Image profile"
+    fabImgAvatar
+  />
+  <div class="profile__info">
+    <div class="profile__id">#{{ item().id }}</div>
+    <div class="profile__login">{{ item().login }}</div>
+  </div>
+</div>

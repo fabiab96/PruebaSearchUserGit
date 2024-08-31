@@ -1,1 +1,8 @@
-<p>input works!</p>
+<input
+  class="form-control"
+  [type]="type()"
+  [value]="value"
+  [placeholder]="placeholder()"
+  [disabled]="isDisabled()"
+  (change)="change($event)"
+/>
